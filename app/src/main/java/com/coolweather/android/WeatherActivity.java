@@ -104,7 +104,7 @@ public class WeatherActivity extends AppCompatActivity {
             }
         });
 
-        //缓存
+
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String weatherString = prefs.getString("weather", null);
         if(weatherString != null){
@@ -126,14 +126,13 @@ public class WeatherActivity extends AppCompatActivity {
         });
 
         //背景图片
-        Glide.with(this).load(R.drawable.bg).into(bingPicImg);
-        /*
+        //Glide.with(this).load(R.drawable.bg).into(bingPicImg);
         String bingPic = prefs.getString("bing_pic", null);
         if(bingPicImg != null){
             Glide.with(this).load(bingPic).into(bingPicImg);
         }else{
             loadBingPic();
-        }*/
+        }
     }
 
     /**
@@ -203,7 +202,7 @@ public class WeatherActivity extends AppCompatActivity {
                 });
             }
         });
-        //loadBingPic();
+        loadBingPic();
     }
 
     /**
